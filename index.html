@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>A Fundamental Misunderstanding of Basketball</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
+		<header>
+			<h1><strong>Basketball RPG</strong></h1>
+		</header>
+		<div class="row">
+			<div class="col-xs-3">
+			</div>
+			<div id="content" class="col-xs-6">
+				<div id="character-images">
+					<div class = "image-padding green-padding option" id = "lebron" attack = "6" counter = "12" hp = "120" name = "The King">
+						<h2 class = "player-name"> Lebron James </h2>
+						<img src = "assets/images/lebron.jpg" alt = "LeBron" class = "player-img">
+						<br>
+						<span id = "stat-lebron"></span> <br>
+						<span id = "hp-lebron"></span>
+					</div>
+					<div class = "image-padding green-padding option" id = "kawhi" attack = "8" counter = "12" hp = "120" name = "The Klaw">
+						<h2 class = "player-name">Kawhi Leonard</h2>
+						<img src = "assets/images/kawhi.jpg" alt = "Kawhi" class = "player-img">
+						<br>
+						<span id = "stat-kawhi"></span> <br>
+						<span id = "hp-kawhi"></span>
+					</div>
+					<div class = "image-padding green-padding option" id = "kevin" attack = "8" counter = "12" hp = "120" name = "KD">
+						<h2 class = "player-name">Kevin Durant</h2>
+						<img src = "assets/images/kevin.jpg" alt = "Kevin" class = "player-img">
+						<br>
+						<span id = "stat-kevin"></span> <br>
+						<span id = "hp-kevin"></span>
+					</div>
+					<div class = "image-padding green-padding option" id = "matthew" attack = "8" counter = "12" hp = "120" name = "Delly">
+						<h2 class = "player-name">Matthew Dellavedova</h2>
+						<img src = "assets/images/matthew.jpg" alt = "Matthew" class = "player-img">
+						<br>
+						<span id = "stat-matthew"></span> <br>
+						<span id = "hp-matthew"></span>
+					</div>
+				</div>
+				<h3 id="instructions" class="blink green-font">Choose your player</h3> 
+			</div>
+			<div class="col-xs-3">
+			</div>
+		</div>
+
+		<div class="row" id = "bottom">
+			<div class = "col-xs-3">
+				<img src = "assets/images/basketball.png" alt = "basketball" id = "basketball">
+				<h5>Attack</h5>
+			</div>
+			<div class="col-xs-6" id = "battlefield">
+				<div id = "your-character">
+					<h4>Your Player</h4>
+					<div id="your-character-img">
+					</div>	
+				</div>
+				<div id = "opponent">
+					<h4>Opponent</h4>
+					<div id="opponent-img">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-3">
+			</div>
+		</div>
+	</body>

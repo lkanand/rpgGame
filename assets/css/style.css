@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'JACKPORT COLLEGE NCV';
+    src: url('JACKPORTCOLLEGENCV.woff2') format('woff2'),
+        url('JACKPORTCOLLEGENCV.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+	text-align: center;
+	font-size: 10vw;
+	font-family: "JACKPORT COLLEGE NCV";
+	margin-right: 5vw;
+	margin-top: 1vw;
+	letter-spacing: .4vw;
+	font-weight: 500;
+}
+
+h5{
+	float: right;
+	font-size: 4vw;
+	font-family: "JACKPORT COLLEGE NCV";
+	text-align: center;
+	margin-right: 2vw;	
+	margin-top: 2vh;
+}
+
+body{
+	background-image: url("../images/basketball_court.png");
+	background-size: 100% auto;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#basketball {
+	width: 35%;
+	height: auto;
+	float: right;
+	margin-top: 14vh;
+	margin-right: 3vw;
+}
+
+#character-images{
+	display: flex;
+	justify-content: space-between;
+}
+
+.player-img{
+	width: 8vw;
+	height: auto;
+	margin-left: 1.5vw;
+	margin-right: 1.5vw;
+	margin-top: .4vh;
+	margin-bottom: 0vh;
+
+}
+
+.image-padding{
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	float: left;
+	padding-top: .6vw;
+	padding-bottom: .6vw;
+	line-height: 1.3em;
+}
+
+.green-padding{
+	background-color: #104221;
+}
+
+.red-padding{
+	background-color: #7a0f07;
+}
+
+.black-padding{
+	background-color: black;
+}
+
+.green-font{
+	color: #104221;
+}
+
+.red-font{
+	color: #7a0f07;
+}
+
+.black-font{
+	color: black;
+}
+
+#instructions{
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin-top: 5vh;
+	margin-bottom: 3vh;
+	font-size: 4vw;
+	font-family: "JACKPORT COLLEGE NCV"; 
+}
+
+#battlefield{
+	display: flex;
+	justify-content: space-between;
+}
+
+#your-character, #opponent{
+	width: 45%;
+}
+
+h4{
+	text-align: center;
+	font-family: "JACKPORT COLLEGE NCV";
+	font-size: 4vw;
+}
+
+#your-character-img{
+	float: right;
+	margin-right: 24%;
+}
+
+#opponent-img{
+	float: left;
+	margin-left: 24%;
+}
+
+#your-hp, #opponent-hp{
+	font-weight: 600;
+	font-size: 1.6vw;
+	float: right;
+}
+
+@-webkit-keyframes blink{
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.blink{
+	-webkit-animation-name: blink;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+}
