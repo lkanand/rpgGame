@@ -25,7 +25,7 @@ function resetGame() {
 		$("#stat-"+playerName).text("Attack: " + $(this).attr("attack"));
 		$("#hp-"+playerName).empty();
 		$("#character-images").append($(this));
-		$("#instructions").text("Choose Opponent");
+		$("#instructions").text("Choose your player");
 		$("#instructions").removeClass("green-font red-font");
 		$("#instructions").addClass("blink green-font")
 		characterChosen = false;
@@ -47,10 +47,9 @@ function gameplay() {
 	opponentsLeft = $(".image-padding").length - 1;
 
 	var chooseCharacter = $(".option");
+	chooseCharacter.unbind("click");
 	chooseCharacter.on("click", function() {
-		console.log("in chooseCharacter click");
 		if(characterChosen === false) {
-			console.log("characterChosen = false");
 			characterId = $(this).attr("id");
 			$("#" + characterId).removeClass("option");
 			$("#your-character-img").append($("#" + characterId));
@@ -62,6 +61,7 @@ function gameplay() {
 			characterHealth = parseInt($("#" + characterId).attr("hp"));
 			characterBaseAttack = parseInt($("#" + characterId).attr("attack"));
 			characterAttack = characterBaseAttack;
+			characterChosen = true;
 			$("#hp-" + characterId).text("HP: " + characterHealth); 
 
 			$(".option").each(function(){
@@ -70,7 +70,7 @@ function gameplay() {
 			});
 		}
 
-		if(characterChosen === true && opponentChosen === false) {
+		else if(characterChosen === true && opponentChosen === false) {
 			opponentId = $(this).attr("id");
 			$("#" + opponentId).removeClass("option");
 			$("#opponent-img").append($("#" + opponentId));
@@ -84,11 +84,12 @@ function gameplay() {
 			opponentChosen = true;
 		}
 
-		characterChosen = true;
+		else{}
 
 	});
 
 	var attackButton = $("#basketball");
+	attackButton.unbind("click");
 	attackButton.on("click", function(){
 		if(opponentChosen === true && characterChosen === true && opponentHealth > 0 && characterHealth > 0) {
 			characterHealth = characterHealth - opponentAttack;
@@ -99,15 +100,13 @@ function gameplay() {
 			characterAttack = characterBaseAttack*(timesClicked + 1);
 			$("#stat-" + characterId).text("Attack: " + characterAttack);
 
-			if(opponentHealth <= 0) {
+			if(opponentHealth <= 0 && characterHealth > 0) {
 				opponentsLeft--;
 				emptiedImages.push($("#opponent-img").html());
-				console.log("push1");
 				var name = $("#" + opponentId).attr("name");
 				$("#opponent-img").empty();
 				$("#instructions").addClass("blink");
 				$("#instructions").removeClass("black-font");
-				console.log(opponentsLeft);
 				if(opponentsLeft > 0) {
 					opponentChosen = false;
 					$("#instructions").text("You defeated " + name); 
@@ -121,16 +120,16 @@ function gameplay() {
 					$("#instructions").append("Game is resetting...");
 					$("#instructions").addClass("green-font");
 					emptiedImages.push($("#your-character-img").html());
-					console.log("push2");
 					setTimeout(resetGame, 5000);
 				}
 			}
-			else if(characterHealth <= 0) {
+			
+			if(characterHealth <= 0) {
 				emptiedImages.push($("#your-character-img").html());
-				console.log("push3");
 				emptiedImages.push($("#opponent-img").html());
-				console.log("push4");
 				$("#your-character-img").empty();
+				if(opponentHealth <= 0)
+					$("#opponent-img").empty();
 				$("#instructions").addClass("blink");
 				$("#instructions").removeClass("black-font");
 				$("#instructions").addClass("red-font");
@@ -139,7 +138,6 @@ function gameplay() {
 				$("#instructions").append("Game is resetting");
 				setTimeout(resetGame, 5000);
 			}
-			else {}
 		}
 	});
 };
