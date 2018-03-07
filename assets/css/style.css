@@ -42,6 +42,7 @@ body{
 #character-images{
 	display: flex;
 	justify-content: space-between;
+	height: 21vh;
 }
 
 .player-img{

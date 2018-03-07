@@ -39,6 +39,9 @@ function resetGame() {
 };
 
 function gameplay() {
+	var audio = new Audio("../rpgGame/assets/audio/roundball_rock.mp3");
+	audio.loop = true;
+	audio.play();
 	$(".image-padding").each(function() {
 		playerName = $(this).attr("id");
 		$("#stat-"+playerName).text("Attack: " + $(this).attr("attack"));
@@ -82,6 +85,10 @@ function gameplay() {
 			opponentAttack = parseInt($("#" + opponentId).attr("counter"));
 			$("#hp-" + opponentId).text("HP: " + opponentHealth);
 			opponentChosen = true;
+			audio.pause();
+			audio = new Audio("../rpgGame/assets/audio/crowd_noise.mp3");
+			audio.loop = true;
+			audio.play();
 		}
 
 		else{}
@@ -120,6 +127,10 @@ function gameplay() {
 					$("#instructions").append("Game is resetting...");
 					$("#instructions").addClass("green-font");
 					emptiedImages.push($("#your-character-img").html());
+					audio.pause();
+					audio = new Audio("../rpgGame/assets/audio/cheer.mp3");
+					audio.loop = false;
+					audio.play();
 					setTimeout(resetGame, 5000);
 				}
 			}
@@ -136,6 +147,10 @@ function gameplay() {
 				$("#instructions").text("Better luck next season"); 
 				$("#instructions").append("<br>");
 				$("#instructions").append("Game is resetting");
+				audio.pause();
+				audio = new Audio("../rpgGame/assets/audio/buzzer.mp3");
+				audio.loop = false;
+				audio.play();
 				setTimeout(resetGame, 5000);
 			}
 		}
