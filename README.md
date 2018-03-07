@@ -13,11 +13,11 @@ When the game loads, you will choose your player by clicking on one of the four 
 * Whenever you attack, your opponent will instantly respond with a counterattack 
 * You and your opponent's health points will decrease by the power of the opposing player's attack / counterattack
 * Your attack power will increase by its base attack value each time you attack
-    ** For example, if your initial attack power is 12, then it will increase to 24 after your first attack, 36 after your second attack, etc.
-    ** Your opponents counterattack power will never change
+    * For example, if your initial attack power is 12, then it will increase to 24 after your first attack, 36 after your second attack, etc.
+    * Your opponents counterattack power will never change
 * Continue clicking on the attack button until you win or lose the 1v1 game
-    ** If you lose, the game will automatically reset 
-    ** If you win, the game will prompt you to select another opponent
+    * If you lose, the game will automatically reset 
+    * If you win, the game will prompt you to select another opponent
 * Once you have defeated all possible opponents, you can call yourself an NBA champion
 
 ## Development
