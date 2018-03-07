@@ -4,7 +4,7 @@ This RPG represents a fundamental misunderstanding of the game of basketball. Us
 
 ## How to Play
 
-Click <a href = "#">here</a> to watch a video demo of Basketball RPG.
+Click <a href = "https://youtu.be/a7NCHv9Lhsw">here</a> to watch a video demo of Basketball RPG.
 
 To begin playing this RPG, click <a href = "https://lkanand.github.io/rpgGame">here</a>. When the game loads, you will choose your player by clicking on one of the four player profiles displayed at the top of the screen. Once you have done so, the program will move your player under the "Your Player" section of the screen and prompt you to pick your first opponent. Once you have selected your first opponent, you are ready to initiate your 1v1 game.
 
